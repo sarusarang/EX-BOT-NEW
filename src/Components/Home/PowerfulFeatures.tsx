@@ -4,6 +4,7 @@ import {
     ListTodo, ArrowRightLeft, ShoppingCart, ArrowRight
 } from 'lucide-react';
 import { Button } from '../ui/button';
+import { Link } from 'react-router-dom';
 
 
 interface FeatureCardProps {
@@ -190,16 +191,20 @@ const PowerfulFeatures = () => {
                 {/* Animated CTA button */}
                 <div className={`mt-16 text-center transition-all duration-700 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                     }`}>
-                    <Button
-                        className="group relative rounded-full px-6 py-6 text-lg overflow-hidden bg-gradient-to-r from-green-600 to-emerald-500 hover:from-green-500 hover:to-emerald-400 border-none transition-all duration-500"
-                    >
-                        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,.3)_50%,transparent_75%)] bg-[length:250%_250%] group-hover:bg-[position:100%_100%] transition-[background-position] duration-1000"></div>
-                        <div className="relative flex items-center">
-                            <span className="transition-transform duration-500 group-hover:translate-x-1">Explore All Features</span>
-                            <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-500 group-hover:translate-x-2" />
-                        </div>
-                    </Button>
+
+                    <Link to={'/pricing'}>
+                        <Button
+                            className="group hover:cursor-pointer  relative rounded-full px-6 py-6 text-lg overflow-hidden bg-gradient-to-r from-green-600 to-emerald-500 hover:from-green-500 hover:to-emerald-400 border-none transition-all duration-500"
+                        >
+                            <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,.3)_50%,transparent_75%)] bg-[length:250%_250%] group-hover:bg-[position:100%_100%] transition-[background-position] duration-1000"></div>
+                            <div className="relative flex items-center">
+                                <span className="transition-transform duration-500 group-hover:translate-x-1">Explore All Features</span>
+                                <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-500 group-hover:translate-x-2" />
+                            </div>
+                        </Button>
+                    </Link>
+
                 </div>
             </div>
         </section>
