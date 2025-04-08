@@ -35,6 +35,9 @@ const HeroSection = () => {
         };
     }, []);
 
+
+
+    // Array of industries
     const industries = [
         'E-COMMERCE', 'EDUCATION', 'MANUFACTURING', 'FINANCE', 'HOSPITALITY',
         'MEDICAL', 'ENTERTAINMENT', 'TECHNOLOGY', 'REAL ESTATE',
@@ -42,12 +45,16 @@ const HeroSection = () => {
         'FACEBOOK ADS', 'FOLLOW-UPS'
     ];
 
+
+
     return (
 
         <section
             ref={sectionRef}
             className="relative min-h-screen w-full overflow-hidden bg-gradient-to-b from-white to-gray-100 dark:from-background dark:to-black flex flex-col justify-center pt-24 pb-10 px-4 sm:px-6"
         >
+
+
             {/* Enhanced background elements */}
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(34,197,94,0.15),rgba(255,255,255,0))]"></div>
@@ -67,7 +74,7 @@ const HeroSection = () => {
 
 
             <div className="relative z-10 max-w-7xl mx-auto">
-                
+
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
 
@@ -129,17 +136,21 @@ const HeroSection = () => {
                         {/* Enhanced CTA Button */}
                         <div className={`${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                             } transition-all duration-1000 delay-500 ease-out`}>
-                            <Button
-                                className="group hover:cursor-pointer relative rounded-full px-6 py-6 text-lg overflow-hidden bg-gradient-to-r from-green-600 to-emerald-500 hover:from-green-500 hover:to-emerald-400 border-none transition-all duration-500"
-                            >
-                                <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,.3)_50%,transparent_75%)] bg-[length:250%_250%] hover:bg-[position:100%_100%] transition-[background-position] duration-1000"></div>
-                                <div className="relative flex items-center">
-                                    <MessageCircle className="mr-2 h-5 w-5 transition-transform duration-500 group-hover:rotate-[20deg] group-hover:scale-110" />
-                                    <span className="transition-transform duration-500 group-hover:translate-x-1">Let's chat to know more about exbot Automation</span>
-                                    <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-500 group-hover:translate-x-2" />
-                                </div>
-                            </Button>
+
+                            <a href="tel:+918606123466" target='_blank'>
+                                <Button
+                                    className="group hover:cursor-pointer relative rounded-full px-6 py-6 text-lg overflow-hidden bg-gradient-to-r from-green-600 to-emerald-500 hover:from-green-500 hover:to-emerald-400 border-none transition-all duration-500"
+                                >
+                                    <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                    <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,.3)_50%,transparent_75%)] bg-[length:250%_250%] hover:bg-[position:100%_100%] transition-[background-position] duration-1000"></div>
+                                    <div className="relative flex items-center">
+                                        <MessageCircle className="mr-2 h-5 w-5 transition-transform duration-500 group-hover:rotate-[20deg] group-hover:scale-110" />
+                                        <span className="transition-transform duration-500 group-hover:translate-x-1">Let's chat to know more about exbot Automation</span>
+                                        <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-500 group-hover:translate-x-2" />
+                                    </div>
+                                </Button>
+                            </a>
+
                         </div>
 
                     </div>

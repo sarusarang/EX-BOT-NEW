@@ -1,12 +1,19 @@
-import  { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { MessageSquare, Bot, Settings, Users, CheckCircle, ArrowRight } from 'lucide-react';
 import { Button } from '../ui/button';
+import { Link } from 'react-router-dom';
+
+
 
 const CustomChatbots = () => {
+
+
     const [isVisible, setIsVisible] = useState(false);
     const sectionRef = useRef<HTMLDivElement>(null);
 
+
     useEffect(() => {
+
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
@@ -26,8 +33,13 @@ const CustomChatbots = () => {
                 observer.unobserve(sectionRef.current);
             }
         };
+
     }, []);
 
+
+
+
+    // List of features
     const features = [
         {
             icon: <MessageSquare className="h-6 w-6" />,
@@ -51,22 +63,31 @@ const CustomChatbots = () => {
         }
     ];
 
+
+
+
     return (
+
+
         <section
             ref={sectionRef}
             className="relative min-h-screen w-full py-20 overflow-hidden bg-gray-50 dark:bg-black dark:via-black dark:to-background"
             id="features"
         >
-           
+
 
             <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 z-10">
+
+
                 <div className="max-w-4xl mx-auto text-center mb-20">
                     <h2
                         className={`text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-emerald-400 mb-6 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                             }`}
                     >
                         Your Customized Chatbots
+
                     </h2>
+
                     <p
                         className={`text-lg text-gray-700 dark:text-gray-300 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                             }`}
@@ -83,7 +104,10 @@ const CustomChatbots = () => {
                     </div>
                 </div>
 
+
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
+
                     {features.map((feature, index) => (
                         <div
                             key={feature.title}
@@ -126,23 +150,31 @@ const CustomChatbots = () => {
                     ))}
                 </div>
 
+
+
                 {/* Added CTA section with animation */}
                 <div className={`mt-16 text-center transition-all duration-700 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                     }`}>
                     <div className="relative inline-block">
                         <div className="absolute -inset-1 bg-gradient-to-r from-green-500 to-emerald-400 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 animate-pulse"></div>
-                        <Button
-                            className="group relative rounded-lg px-6 py-3 text-lg overflow-hidden bg-gradient-to-r from-green-600 to-emerald-500 hover:from-green-500 hover:to-emerald-400 border-none transition-all duration-500"
-                        >
-                            <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,.2)_50%,transparent_75%)] bg-[length:250%_250%] hover:bg-[position:100%_100%] transition-[background-position] duration-1000"></div>
-                            <div className="relative flex items-center">
-                                <CheckCircle className="mr-2 h-5 w-5 transition-transform duration-300 group-hover:rotate-12" />
-                                <span>Get Started with Customized Solutions</span>
-                                <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-                            </div>
-                        </Button>
+
+                        <Link to={'/pricing'}>
+                            <Button
+                                className="group hover:cursor-pointer relative rounded-lg px-6 py-3 text-lg overflow-hidden bg-gradient-to-r from-green-600 to-emerald-500 hover:from-green-500 hover:to-emerald-400 border-none transition-all duration-500"
+                            >
+                                <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,.2)_50%,transparent_75%)] bg-[length:250%_250%] hover:bg-[position:100%_100%] transition-[background-position] duration-1000"></div>
+                                <div className="relative flex items-center">
+                                    <CheckCircle className="mr-2 h-5 w-5 transition-transform duration-300 group-hover:rotate-12" />
+                                    <span>Get Started with Customized Solutions</span>
+                                    <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                                </div>
+                            </Button>
+                        </Link>
+
                     </div>
                 </div>
+
+
             </div>
         </section>
     );

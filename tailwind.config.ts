@@ -146,7 +146,13 @@ export default {
                 'shimmer': {
                     '0%': { backgroundPosition: '-200% 0' },
                     '100%': { backgroundPosition: '200% 0' }
-                }
+                },
+                'meteor': {
+                    "0%": { transform: "translateY(-20%) translateX(-50%)" },
+                    "100%": { transform: "translateY(300%) translateX(-50%)" },
+                },
+               
+
             },
             animation: {
                 'accordion-down': 'accordion-down 0.2s ease-out',
@@ -162,7 +168,10 @@ export default {
                 'bounce': 'bounce 1s infinite',
                 'micro-bounce': 'micro-bounce 2s ease-in-out infinite',
                 'micro-pulse': 'micro-pulse 2s ease-in-out infinite',
-                'shimmer': 'shimmer 2s linear infinite'
+                'shimmer': 'shimmer 2s linear infinite',
+                'meteor': "meteor var(--duration) var(--delay) ease-in-out infinite",
+               
+
             },
             transitionDelay: {
                 '1500': '1500ms',
@@ -176,5 +185,5 @@ export default {
     },
 
     plugins: [require("tailwindcss-animate")],
-    
+
 } satisfies Config;

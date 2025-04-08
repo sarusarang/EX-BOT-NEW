@@ -7,8 +7,10 @@ import {
   Phone,
   MapPin,
   ArrowRight,
+  Youtube,
+
 } from 'lucide-react';
-import { Button } from '../ui/button';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -31,74 +33,171 @@ const Footer = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 px-0 sm:px-5">
 
-          
+
           {/* Column 1: Logo and description */}
           <div className="space-y-4">
+
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Ex Bot</h2>
+
             <p className="text-gray-600 dark:text-gray-400 text-sm">
               Empowering businesses with AI-driven WhatsApp automation solutions that transform customer interactions and drive growth.
             </p>
+
             <div className="flex items-center space-x-4 pt-2">
-              <Button variant="ghost" size="icon" className="rounded-full bg-blue-100 dark:bg-green-900/20 text-green-600 dark:text-gray-400 hover:bg-green-200 dark:hover:bg-green-500/20 hover:text-gray-700 dark:hover:text-green-400 transition-all hover:scale-110">
-                <Facebook className="h-5 w-5" />
-                <span className="sr-only">Facebook</span>
-              </Button>
-              <Button variant="ghost" size="icon" className="rounded-full bg-blue-100 dark:bg-green-900/20 text-green-600 dark:text-gray-400 hover:bg-green-200 dark:hover:bg-green-500/20 hover:text-gray-700 dark:hover:text-green-400 transition-all hover:scale-110">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </Button>
-              <Button variant="ghost" size="icon" className="rounded-full bg-blue-100 dark:bg-green-900/20 text-green-600 dark:text-gray-400 hover:bg-green-200 dark:hover:bg-green-500/20 hover:text-gray-700 dark:hover:text-green-400 transition-all hover:scale-110">
-                <Instagram className="h-5 w-5" />
-                <span className="sr-only">Instagram</span>
-              </Button>
-              <Button variant="ghost" size="icon" className="rounded-full bg-blue-100 dark:bg-green-900/20 text-green-600 dark:text-gray-400 hover:bg-green-200 dark:hover:bg-green-500/20 hover:text-gray-700 dark:hover:text-green-400 transition-all hover:scale-110">
-                <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
-              </Button>
+
+              <div className="flex items-center space-x-4 pt-2">
+                <a
+                  href="https://www.facebook.com/exbotai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="rounded-full p-2 bg-blue-100 dark:bg-green-900/20 text-green-600 dark:text-gray-400 hover:bg-green-200 dark:hover:bg-green-500/20 hover:text-gray-700 dark:hover:text-green-400 transition-all hover:scale-110"
+                >
+                  <Facebook className="h-5 w-5" />
+                </a>
+
+                <a
+                  href="https://x.com/exbotai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="X (Twitter)"
+                  className="rounded-full p-2 bg-blue-100 dark:bg-green-900/20 text-green-600 dark:text-gray-400 hover:bg-green-200 dark:hover:bg-green-500/20 hover:text-gray-700 dark:hover:text-green-400 transition-all hover:scale-110"
+                >
+                  <Twitter className="h-5 w-5" />
+                </a>
+
+                <a
+                  href="https://www.instagram.com/exbotai/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="rounded-full p-2 bg-blue-100 dark:bg-green-900/20 text-green-600 dark:text-gray-400 hover:bg-green-200 dark:hover:bg-green-500/20 hover:text-gray-700 dark:hover:text-green-400 transition-all hover:scale-110"
+                >
+                  <Instagram className="h-5 w-5" />
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/company/exbotai/about/?viewAsMember=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="rounded-full p-2 bg-blue-100 dark:bg-green-900/20 text-green-600 dark:text-gray-400 hover:bg-green-200 dark:hover:bg-green-500/20 hover:text-gray-700 dark:hover:text-green-400 transition-all hover:scale-110"
+                >
+                  <Linkedin className="h-5 w-5" />
+                </a>
+
+                <a
+                  href="https://www.youtube.com/@exbotai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube"
+                  className="rounded-full p-2 bg-blue-100 dark:bg-green-900/20 text-green-600 dark:text-gray-400 hover:bg-green-200 dark:hover:bg-green-500/20 hover:text-gray-700 dark:hover:text-green-400 transition-all hover:scale-110"
+                >
+                  <Youtube className="h-5 w-5" />
+                </a>
+              </div>
+
+
             </div>
+
           </div>
+
+
 
           {/* Column 2: Quick Links */}
           <div className="space-y-4">
+
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Quick Links</h3>
+
             <ul className="space-y-2">
-              {['My Account', 'About Us', 'Pricing', 'Contact'].map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 flex items-center group transition-colors duration-300">
-                    <span className="inline-block w-0 group-hover:w-2 overflow-hidden transition-all duration-300">
-                      <ArrowRight className="h-4 w-4 text-green-500 dark:text-green-500" />
-                    </span>
-                    <span className="group-hover:translate-x-2 transition-transform duration-300">{item}</span>
-                  </a>
-                </li>
-              ))}
+
+              <li>
+                <a href="https://app.exapi.in/login" className="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 flex items-center group transition-colors duration-300">
+                  <span className="inline-block w-0 group-hover:w-2 overflow-hidden transition-all duration-300">
+                    <ArrowRight className="h-4 w-4 text-green-500 dark:text-green-500" />
+                  </span>
+                  <span className="group-hover:translate-x-2 transition-transform duration-300">My Account</span>
+                </a>
+              </li>
+
+
+              <li>
+                <Link to={'/'} className="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 flex items-center group transition-colors duration-300">
+                  <span className="inline-block w-0 group-hover:w-2 overflow-hidden transition-all duration-300">
+                    <ArrowRight className="h-4 w-4 text-green-500 dark:text-green-500" />
+                  </span>
+                  <span className="group-hover:translate-x-2 transition-transform duration-300">Home</span>
+                </Link>
+              </li>
+
+
+              <li>
+                <Link to={'/pricing'} className="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 flex items-center group transition-colors duration-300">
+                  <span className="inline-block w-0 group-hover:w-2 overflow-hidden transition-all duration-300">
+                    <ArrowRight className="h-4 w-4 text-green-500 dark:text-green-500" />
+                  </span>
+                  <span className="group-hover:translate-x-2 transition-transform duration-300">Pricing</span>
+                </Link>
+              </li>
+
+
+              <li>
+                <a href="https://app.exapi.in/login" className="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 flex items-center group transition-colors duration-300">
+                  <span className="inline-block w-0 group-hover:w-2 overflow-hidden transition-all duration-300">
+                    <ArrowRight className="h-4 w-4 text-green-500 dark:text-green-500" />
+                  </span>
+                  <span className="group-hover:translate-x-2 transition-transform duration-300">Login</span>
+                </a>
+              </li>
+
+
             </ul>
+
           </div>
+
+
 
           {/* Column 3: Contact Information */}
           <div className="space-y-4">
+
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Contact Us</h3>
+
             <div className="space-y-3">
-              <div className="flex items-start">
+
+
+              <div className="flex items-center">
                 <div className="mt-1 mr-3 p-2 rounded-full bg-blue-100 dark:bg-green-900/20">
                   <MapPin className="h-4 w-4 text-green-500 dark:text-green-500" />
                 </div>
                 <span className="text-gray-600 dark:text-gray-400 text-sm">12/550, CALICUT, KERALA 673633 India</span>
               </div>
+
+
               <div className="flex items-center">
-                <div className="mr-3 p-2 rounded-full bg-blue-100 dark:bg-green-900/20">
-                  <Phone className="h-4 w-4 text-green-500 dark:text-green-500" />
-                </div>
-                <span className="text-gray-600 dark:text-gray-400 text-sm">+91 8606123466</span>
+                <a href="tel:+918606123466" target='_blank' className="flex items-center">
+                  <div className="mr-3 p-2 rounded-full bg-blue-100 dark:bg-green-900/20">
+                    <Phone className="h-4 w-4 text-green-500 dark:text-green-500" />
+                  </div>
+                  <span className="text-gray-600 dark:text-gray-400 text-sm">+91 8606123466</span>
+                </a>
               </div>
+
               <div className="flex items-center">
-                <div className="mr-3 p-2 rounded-full bg-blue-100 dark:bg-green-900/20">
-                  <Mail className="h-4 w-4 text-green-500 dark:text-green-500" />
-                </div>
-                <span className="text-gray-600 dark:text-gray-400 text-sm">exbotcare@exbot.in</span>
+                <a href="mailto:exbotcare@exbot.in" target='_blank' className="flex items-center">
+                  <div className="mr-3 p-2 rounded-full bg-blue-100 dark:bg-green-900/20">
+                    <Mail className="h-4 w-4 text-green-500 dark:text-green-500" />
+                  </div>
+                  <span className="text-gray-600 dark:text-gray-400 text-sm">exbotcare@exbot.in</span>
+                </a>
               </div>
+
+
             </div>
+
           </div>
+
+
+
 
           {/* Column 4: Newsletter */}
           <div className="space-y-4">
@@ -117,23 +216,57 @@ const Footer = () => {
           </div>
         </div>
 
+
+
         {/* Bottom bar */}
         <div className="border-t border-gray-200 dark:border-gray-800 pt-8 pb-4">
+          
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-500 dark:text-gray-500 text-sm mb-4 md:mb-0">© 2024 Exbot. All rights reserved.</p>
+
+            <p className="text-gray-500 dark:text-gray-500 text-sm mb-4 md:mb-0">
+              © 2025 Exbot. All rights reserved.
+            </p>
+
+
             <div className="flex flex-wrap justify-center gap-4">
-              {['Privacy Policy', 'Terms and Conditions', 'Refund Policy', 'Disclaimer'].map((item) => (
-                <a
-                  key={item}
-                  href="#"
-                  className="text-gray-500 dark:text-gray-500 text-xs hover:text-green-400 dark:hover:text-green-400 transition-colors duration-300"
-                >
-                  {item}
-                </a>
-              ))}
+
+
+              <Link
+                to={'/privacypolicy'}
+                className="text-gray-500 dark:text-gray-500 text-xs hover:text-green-400 dark:hover:text-green-400 transition-colors duration-300"
+              >
+                Privacy Policy
+              </Link>
+
+
+              <Link
+                to={'/termsconditions'}
+                className="text-gray-500 dark:text-gray-500 text-xs hover:text-green-400 dark:hover:text-green-400 transition-colors duration-300"
+              >
+                Terms and Conditions
+              </Link>
+
+
+              <Link
+                to={'/refundpolicy'}
+                className="text-gray-500 dark:text-gray-500 text-xs hover:text-green-400 dark:hover:text-green-400 transition-colors duration-300"
+              >
+                Refund Policy
+              </Link>
+
+
+              <Link
+                to={'/disclaimer'}
+                className="text-gray-500 dark:text-gray-500 text-xs hover:text-green-400 dark:hover:text-green-400 transition-colors duration-300"
+              >
+                Disclaimer
+              </Link>
+
+
             </div>
           </div>
         </div>
+
 
 
       </div>
