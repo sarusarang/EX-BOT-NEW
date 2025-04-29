@@ -1,9 +1,9 @@
-import Header from "./Header"
-import Footer from "./Footer"
+import Header from "../Common/Header"
+import Footer from "../Common/Footer"
 import { Outlet } from "react-router-dom"
 import Aurora from "../Price/Aurora/Aurora"
 
-export default function Layout() {
+export default function MainLayout() {
 
 
     return (

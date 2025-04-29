@@ -1,7 +1,7 @@
 import { MessageSquareText, CheckCircle } from 'lucide-react';
 import { BlurFade } from '../magicui/blur-fade';
 import { useState } from 'react';
-import PriceModal from '../Layout/PriceModal';
+import PdfModal from '../Common/PriceModal';
 
 
 export default function PriceFoot() {
@@ -107,7 +107,7 @@ export default function PriceFoot() {
             </div>
 
 
-            <PriceModal isOpen={isOpen} setIsOpen={setIsOpen} />
+            <PdfModal isOpen={isOpen} setIsOpen={setIsOpen} />
 
 
         </div >

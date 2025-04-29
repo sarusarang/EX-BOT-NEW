@@ -11,7 +11,10 @@ export default function Refund() {
 
 
             <div className="bg-white dark:bg-black min-h-screen px-4 sm:px-8 md:px-16 pb-16 pt-28 text-black dark:text-gray-300">
+
                 <div className="max-w-5xl mx-auto space-y-8">
+
+                    
                     <div className="text-center mb-12">
                         <h1 className="text-4xl font-bold mb-2">Refund Policy</h1>
                         <p className="text-sm text-gray-500 dark:text-gray-400">Last Updated: 15/08/2024</p>

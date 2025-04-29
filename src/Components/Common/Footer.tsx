@@ -1,6 +1,5 @@
 import {
   Facebook,
-  Twitter,
   Instagram,
   Linkedin,
   Mail,
@@ -12,8 +11,14 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+
+
 const Footer = () => {
+
+
   return (
+
+
     <footer className="relative overflow-hidden bg-white dark:bg-black">
 
 
@@ -63,7 +68,7 @@ const Footer = () => {
                   aria-label="X (Twitter)"
                   className="rounded-full p-2 bg-blue-100 dark:bg-green-900/20 text-green-600 dark:text-gray-400 hover:bg-green-200 dark:hover:bg-green-500/20 hover:text-gray-700 dark:hover:text-green-400 transition-all hover:scale-110"
                 >
-                  <Twitter className="h-5 w-5" />
+                  <i className="fa-brands fa-x-twitter h-4 w-4"></i>
                 </a>
 
                 <a
@@ -174,7 +179,7 @@ const Footer = () => {
 
 
               <div className="flex items-center">
-                <a href="tel:+918606123466" target='_blank' className="flex items-center">
+                <a href="https://wa.me/918606123466?text=Hello%20there!" target='_blank' className="flex items-center">
                   <div className="mr-3 p-2 rounded-full bg-blue-100 dark:bg-green-900/20">
                     <Phone className="h-4 w-4 text-green-500 dark:text-green-500" />
                   </div>
@@ -183,11 +188,11 @@ const Footer = () => {
               </div>
 
               <div className="flex items-center">
-                <a href="mailto:exbotcare@exbot.in" target='_blank' className="flex items-center">
+                <a href="mailto:care@exbot.in" target='_blank' className="flex items-center">
                   <div className="mr-3 p-2 rounded-full bg-blue-100 dark:bg-green-900/20">
                     <Mail className="h-4 w-4 text-green-500 dark:text-green-500" />
                   </div>
-                  <span className="text-gray-600 dark:text-gray-400 text-sm">exbotcare@exbot.in</span>
+                  <span className="text-gray-600 dark:text-gray-400 text-sm">care@exbot.in</span>
                 </a>
               </div>
 
@@ -220,12 +225,23 @@ const Footer = () => {
 
         {/* Bottom bar */}
         <div className="border-t border-gray-200 dark:border-gray-800 pt-8 pb-4">
-          
+
           <div className="flex flex-col md:flex-row justify-between items-center">
 
-            <p className="text-gray-500 dark:text-gray-500 text-sm mb-4 md:mb-0">
-              © 2025 Exbot. All rights reserved.
-            </p>
+
+            <div className='flex flex-col'>
+
+              <p className="text-gray-500 dark:text-gray-500 text-sm mb-4 md:mb-0">
+                © 2025 Exbot. All rights reserved.
+              </p>
+
+              <p className="text-gray-500 dark:text-gray-500 text-sm mb-4 md:mb-0">
+                Our parent company is exmedia affiliated by <a href="http://wcapi.io" target='_blank' className='hover:text-green-400 dark:hover:text-green-400 transition-colors duration-300'>wcapi.io</a>
+              </p>
+
+            </div>
+
+
 
 
             <div className="flex flex-wrap justify-center gap-4">
@@ -256,6 +272,15 @@ const Footer = () => {
 
 
               <Link
+                to={'/customerpolicychoice'}
+                className="text-gray-500 dark:text-gray-500 text-xs hover:text-green-400 dark:hover:text-green-400 transition-colors duration-300"
+              >
+                Customer Policy Choice
+              </Link>
+
+
+
+              <Link
                 to={'/disclaimer'}
                 className="text-gray-500 dark:text-gray-500 text-xs hover:text-green-400 dark:hover:text-green-400 transition-colors duration-300"
               >
@@ -270,6 +295,8 @@ const Footer = () => {
 
 
       </div>
+
+
     </footer>
   );
 };
