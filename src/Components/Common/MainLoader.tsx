@@ -6,7 +6,7 @@ const LoadingSpinner: React.FC = () => {
       <div className="flex flex-col items-center gap-6">
         <div className="relative animate-pulse">
           <img
-            src="/Exbot logo Icon-01.svg"
+            src="/fav-icon.svg"
             loading="lazy"
             alt="Loading Logo"
             className="w-24 h-24 sm:w-28 sm:h-28 drop-shadow-[0_0_20px_rgba(0,255,127,0.4)]"
