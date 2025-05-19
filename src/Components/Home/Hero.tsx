@@ -137,7 +137,7 @@ const HeroSection = () => {
                         <div className={`${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                             } transition-all duration-1000 delay-500 ease-out`}>
 
-                            <a href="tel:+918606123466" target='_blank'>
+                            <a href="https://wa.me/918606123466?text=Hello%20there!"  target='_blank'>
                                 <Button
                                     className="group hover:cursor-pointer relative rounded-full px-6 py-6 text-lg overflow-hidden bg-gradient-to-r from-green-600 to-emerald-500 hover:from-green-500 hover:to-emerald-400 border-none transition-all duration-500"
                                 >

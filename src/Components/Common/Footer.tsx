@@ -100,6 +100,19 @@ const Footer = () => {
                 >
                   <Youtube className="h-5 w-5" />
                 </a>
+
+
+                <a
+                  href="https://in.pinterest.com/exbotai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube"
+                  className="rounded-full p-2 bg-blue-100 dark:bg-green-900/20 text-green-600 dark:text-gray-400 hover:bg-green-200 dark:hover:bg-green-500/20 hover:text-gray-700 dark:hover:text-green-400 transition-all hover:scale-110"
+                >
+                  <i className="fa-brands fa-pinterest h-5 w-5"></i>
+                </a>
+
+
               </div>
 
 
@@ -179,7 +192,7 @@ const Footer = () => {
 
 
               <div className="flex items-center">
-                <a href="https://wa.me/918606123466?text=Hello%20there!" target='_blank' className="flex items-center">
+                <a href="tel:+918606123466" target='_blank' className="flex items-center">
                   <div className="mr-3 p-2 rounded-full bg-blue-100 dark:bg-green-900/20">
                     <Phone className="h-4 w-4 text-green-500 dark:text-green-500" />
                   </div>

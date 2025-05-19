@@ -87,8 +87,8 @@ export default function PriceFoot() {
                                 </ul>
 
 
-                                <a href="tel:+918606123466" target='_blank' className='hover:cursor-pointer'>
-                                    <button className="w-full py-3  px-6 bg-gradient-to-r from-green-600 to-green-700 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center group">
+                                <a href="https://wa.me/918606123466?text=Hello%20there!" target='_blank' className='hover:cursor-pointer'>
+                                    <button className="w-full py-3 hover:cursor-pointer px-6 bg-gradient-to-r from-green-600 to-green-700 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center group">
                                         <span>Order Now</span>
                                         <svg className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
