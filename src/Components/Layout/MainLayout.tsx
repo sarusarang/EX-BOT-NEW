@@ -2,6 +2,9 @@ import Header from "../Common/Header"
 import Footer from "../Common/Footer"
 import { Outlet } from "react-router-dom"
 import Aurora from "../Price/Aurora/Aurora"
+import WhatsAppChat from "../Common/WhatsApp"
+
+
 
 export default function MainLayout() {
 
@@ -43,6 +46,13 @@ export default function MainLayout() {
                 {/* Footer */}
                 <Footer />
 
+
+                {/* WhatsApp Chat */}
+                <section aria-label="WhatsApp Chat">
+                    <WhatsAppChat />
+                </section>
+
+
             </main>
 
         </>
@@ -50,8 +60,6 @@ export default function MainLayout() {
 
 
     )
-
-
 
 
 }

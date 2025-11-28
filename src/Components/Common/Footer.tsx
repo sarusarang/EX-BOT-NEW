@@ -285,6 +285,14 @@ const Footer = () => {
 
 
               <Link
+                to={'/hackerpolicy'}
+                className="text-gray-500 dark:text-gray-500 text-xs hover:text-green-400 dark:hover:text-green-400 transition-colors duration-300"
+              >
+                Hacker Policy
+              </Link>
+
+
+              <Link
                 to={'/customerpolicychoice'}
                 className="text-gray-500 dark:text-gray-500 text-xs hover:text-green-400 dark:hover:text-green-400 transition-colors duration-300"
               >
