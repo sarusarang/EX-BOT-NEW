@@ -245,7 +245,7 @@ const Footer = () => {
             <div className='flex flex-col'>
 
               <p className="text-gray-500 dark:text-gray-500 text-sm mb-4 md:mb-0">
-                © 2025 Exbot. All rights reserved.
+                © {new Date().getFullYear()} Exbot. All rights reserved.
               </p>
 
               <p className="text-gray-500 dark:text-gray-500 text-sm mb-4 md:mb-0">
